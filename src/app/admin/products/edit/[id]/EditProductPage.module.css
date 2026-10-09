@@ -1,0 +1,40 @@
+.page {
+  min-width: 0;
+  color: #f8fafc;
+}
+
+.header {
+  margin-bottom: 26px;
+}
+
+.eyebrow {
+  margin-bottom: 6px;
+  color: #3b82f6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.title {
+  margin: 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+@media (max-width: 575.98px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,275 @@
+.page {
+  min-height: calc(100vh - 80px);
+  background: #0b0e13;
+  color: #eef2f7;
+}
+
+.productLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+  gap: 64px;
+  align-items: start;
+}
+
+/* Product image */
+
+.imageSection {
+  min-width: 0;
+}
+
+.imageCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 560px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: #f5f6f8;
+}
+
+.productImage {
+  display: block;
+  width: 100%;
+  height: 560px;
+  object-fit: contain;
+  padding: 30px;
+}
+
+/* Product details */
+
+.detailsSection {
+  padding-top: 12px;
+}
+
+.category {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid rgba(77, 156, 255, 0.16);
+  border-radius: 6px;
+  background: rgba(77, 156, 255, 0.07);
+  color: #66aaff;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 650px;
+  margin: 18px 0 0;
+  color: #f3f6fa;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.priceSection {
+  margin-top: 25px;
+}
+
+.price {
+  color: #f5f7fa;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 28px 0;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Actions */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/*
+  AddToCartButton and WishlistButton already own
+  their functional behavior.
+
+  These selectors provide sensible sizing if their
+  existing components expose normal button elements.
+*/
+
+.actions button {
+  min-height: 46px;
+}
+
+.productInformation {
+  padding: 0;
+}
+
+.informationTitle {
+  margin: 0 0 18px;
+  color: #e9edf3;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.informationRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  min-height: 46px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+  color: #778290;
+  font-size: 13px;
+}
+
+.informationRow:first-of-type {
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.informationRow strong {
+  max-width: 60%;
+  overflow: hidden;
+  color: #dce2ea;
+  font-weight: 550;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Continue shopping */
+
+.browseLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 28px;
+  color: #687382;
+  font-size: 12px;
+}
+
+.browseLink a {
+  color: #65a9ff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.browseLink a:hover {
+  color: #8bbfff;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .productLayout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .imageCard {
+    min-height: 500px;
+  }
+
+  .productImage {
+    height: 500px;
+  }
+
+  .detailsSection {
+    padding-top: 0;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .page {
+    min-height: calc(100vh - 70px);
+  }
+
+  .productLayout {
+    gap: 28px;
+  }
+
+  .imageCard {
+    min-height: 380px;
+    border-radius: 14px;
+  }
+
+  .productImage {
+    height: 380px;
+    padding: 20px;
+  }
+
+  .title {
+    margin-top: 14px;
+    font-size: 28px;
+  }
+
+  .priceSection {
+    margin-top: 20px;
+  }
+
+  .price {
+    font-size: 25px;
+  }
+
+  .divider {
+    margin: 22px 0;
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .browseLink {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageCard {
+    min-height: 320px;
+  }
+
+  .productImage {
+    height: 320px;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .informationRow {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 11px 0;
+  }
+
+  .informationRow strong {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .browseLink a {
+    transition: none;
+  }
+}   

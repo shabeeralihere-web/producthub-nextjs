@@ -1,0 +1,406 @@
+.wrapper {
+  min-width: 0;
+}
+
+.topBar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.sectionLabel {
+  margin-bottom: 7px;
+  color: #60a5fa;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.heading {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.description {
+  margin: 7px 0 0;
+  color: #7f8a9b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.addButton,
+.emptyButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 0 15px;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  color: #fff;
+  background: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.addButton:hover,
+.emptyButton:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.summaryBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  background: #0f1722;
+  border: 1px solid #1e293b;
+  border-radius: 9px;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.summaryItem svg {
+  color: #60a5fa;
+}
+
+.summaryLimit {
+  color: #475569;
+  font-size: 11px;
+}
+
+.errorBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  background: rgba(127, 29, 29, 0.14);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+  border-radius: 8px;
+  color: #fca5a5;
+  font-size: 12px;
+}
+
+.errorBox strong {
+  color: #f87171;
+  font-size: 12px;
+}
+
+.formSection {
+  margin-bottom: 24px;
+}
+
+.addressList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.addressCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #101823;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.addressCard:hover {
+  border-color: #334155;
+  transform: translateY(-1px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.cardIdentity {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.addressIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: #60a5fa;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.cardIdentity h3 {
+  margin: 0 0 3px;
+  color: #f1f5f9;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cardIdentity span {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.savedBadge {
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  border-radius: 5px;
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.08);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardBody {
+  flex: 1;
+  padding: 18px;
+}
+
+.personRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 5px;
+  color: #cbd5e1;
+  font-size: 12px;
+}
+
+.personRow svg {
+  color: #64748b;
+}
+
+.phone {
+  margin: 0 0 14px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.addressDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.addressDetails span:last-child {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.cardFooter {
+  display: flex;
+  gap: 8px;
+  padding: 13px 18px;
+  border-top: 1px solid #1e293b;
+  background: #0d1520;
+}
+
+.editButton,
+.deleteButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 11px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.editButton {
+  color: #60a5fa;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.editButton:hover {
+  color: #93c5fd;
+  background: rgba(37, 99, 235, 0.14);
+}
+
+.deleteButton {
+  color: #f87171;
+  background: transparent;
+  border: 1px solid #2b2227;
+}
+
+.deleteButton:hover {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.editButton:disabled,
+.deleteButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 54px 24px;
+  text-align: center;
+  background: #101823;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+}
+
+.emptyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  color: #60a5fa;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+}
+
+.emptyState h3 {
+  margin: 0 0 7px;
+  color: #f1f5f9;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.emptyState p {
+  max-width: 360px;
+  margin: 0 0 20px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.limitNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin-top: 18px;
+  padding: 13px 15px;
+  background: #0f1722;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  color: #64748b;
+}
+
+.limitNotice > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #60a5fa;
+}
+
+.limitNotice strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.limitNotice p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .addressList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .topBar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .addButton {
+    width: 100%;
+  }
+
+  .summaryBar {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 11px 14px;
+  }
+
+  .addressList {
+    gap: 12px;
+  }
+
+  .cardTop {
+    padding: 15px;
+  }
+
+  .cardBody {
+    padding: 15px;
+  }
+
+  .cardFooter {
+    padding: 11px 15px;
+  }
+
+  .editButton,
+  .deleteButton {
+    flex: 1;
+  }
+}

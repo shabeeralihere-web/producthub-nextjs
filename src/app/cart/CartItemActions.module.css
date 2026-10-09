@@ -1,0 +1,123 @@
+.wrapper {
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityControl {
+  display: inline-flex;
+  height: 34px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  background: #171c24;
+  align-items: center;
+}
+
+.quantityButton {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #8c97a5;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.quantityButton:hover:not(:disabled) {
+  background: #202631;
+  color: #edf2f7;
+}
+
+.quantityButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.quantityButton svg {
+  width: 13px;
+  height: 13px;
+}
+
+.quantity {
+  display: flex;
+  min-width: 31px;
+  height: 32px;
+  border-right: 1px solid
+    rgba(255, 255, 255, 0.06);
+  border-left: 1px solid
+    rgba(255, 255, 255, 0.06);
+  color: #e5eaf0;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.loading {
+  color: #6caeff;
+}
+
+.removeButton {
+  display: inline-flex;
+  min-height: 34px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #747f8d;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 550;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.removeButton:hover:not(:disabled) {
+  background: rgba(239, 115, 125, 0.08);
+  color: #ef737d;
+}
+
+.removeButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+.removeButton svg {
+  width: 13px;
+  height: 13px;
+}
+
+.error {
+  margin: 7px 0 0;
+  color: #ef737d;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+  .controls {
+    justify-content: space-between;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quantityButton,
+  .removeButton {
+    transition: none;
+  }
+}

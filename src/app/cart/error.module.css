@@ -1,0 +1,125 @@
+.page {
+  min-height: calc(100vh - 80px);
+  background: #0b0e13;
+  color: #eef2f7;
+}
+
+.errorCard {
+  display: flex;
+  max-width: 560px;
+  min-height: 340px;
+  margin: 50px auto;
+  padding: 45px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  background: #11151c;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.iconWrapper {
+  display: flex;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(239, 115, 125, 0.15);
+  border-radius: 15px;
+  background: rgba(239, 115, 125, 0.07);
+  color: #ef737d;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrapper svg {
+  width: 25px;
+  height: 25px;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  color: #687382;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: #edf1f6;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.message {
+  max-width: 440px;
+  margin: 11px 0 24px;
+  color: #7c8795;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.retryButton {
+  display: inline-flex;
+  min-height: 42px;
+  padding: 0 17px;
+  border: 1px solid #3c8ce8;
+  border-radius: 8px;
+  background: #357fd4;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.retryButton:hover {
+  border-color: #4b98ed;
+  background: #438fe8;
+}
+
+.retryButton:active {
+  transform: translateY(1px);
+}
+
+.retryButton svg {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 575px) {
+  .errorCard {
+    min-height: 300px;
+    margin: 25px auto;
+    padding: 35px 20px;
+  }
+
+  .title {
+    font-size: 21px;
+  }
+
+  .message {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .retryButton {
+    transition: none;
+  }
+
+  .retryButton:active {
+    transform: none;
+  }
+}

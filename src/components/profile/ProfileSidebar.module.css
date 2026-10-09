@@ -1,0 +1,192 @@
+.sidebar {
+  position: sticky;
+  top: 90px;
+
+  overflow: hidden;
+
+  background: #111827;
+
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+}
+
+/* Heading */
+
+.heading {
+  padding: 22px 20px 18px;
+
+  border-bottom: 1px solid #1f2937;
+}
+
+.heading span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #f3f4f6;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.heading p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 11px;
+}
+
+/* Navigation */
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  padding: 10px;
+}
+
+.link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  min-height: 44px;
+
+  padding: 0 12px;
+
+  color: #8b95a5;
+
+  border: 1px solid transparent;
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.link:hover {
+  color: #e5e7eb;
+
+  background: #182131;
+
+  border-color: #202c3c;
+}
+
+.linkIcon {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.linkLabel {
+  flex: 1;
+}
+
+/* Active */
+
+.active {
+  color: #ffffff;
+
+  background: rgba(37, 99, 235, 0.12);
+
+  border-color: rgba(59, 130, 246, 0.18);
+}
+
+.active:hover {
+  color: #ffffff;
+
+  background: rgba(37, 99, 235, 0.15);
+}
+
+.active .linkIcon {
+  color: #60a5fa;
+}
+
+.activeIndicator {
+  width: 3px;
+  height: 20px;
+
+  background: #3b82f6;
+
+  border-radius: 999px;
+}
+
+/* Mobile */
+
+@media (max-width: 991px) {
+  .sidebar {
+    position: static;
+
+    border-radius: 14px;
+  }
+
+  .heading {
+    padding: 18px 18px 14px;
+  }
+
+  .navigation {
+    flex-direction: row;
+
+    overflow-x: auto;
+
+    padding: 9px;
+
+    scrollbar-width: none;
+  }
+
+  .navigation::-webkit-scrollbar {
+    display: none;
+  }
+
+  .link {
+    flex: 0 0 auto;
+
+    min-height: 40px;
+
+    white-space: nowrap;
+  }
+
+  .activeIndicator {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .heading {
+    display: none;
+  }
+
+  .navigation {
+    padding: 8px;
+  }
+
+  .link {
+    min-height: 38px;
+
+    padding: 0 11px;
+
+    font-size: 12px;
+  }
+
+  .linkIcon {
+    width: 18px;
+    height: 18px;
+  }
+}

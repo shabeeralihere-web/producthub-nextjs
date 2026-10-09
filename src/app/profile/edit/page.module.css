@@ -1,0 +1,238 @@
+.page {
+  min-height: calc(100vh - 80px);
+
+  padding: 36px 0 70px;
+
+  background: #0b111a;
+}
+
+.layout {
+  width: 100%;
+  max-width: 820px;
+
+  margin: 30px auto 0;
+}
+
+/* Header */
+
+.header {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #60a5fa;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 8px;
+
+  color: #f9fafb;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  max-width: 570px;
+
+  margin: 0;
+
+  color: #8b95a5;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Form card */
+
+.formCard {
+  overflow: hidden;
+
+  background: rgba(18, 22, 29, 0.88);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.formHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 24px 26px;
+}
+
+.formTitle {
+  margin: 0;
+
+  color: #edf1f7;
+
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.formDescription {
+  margin: 6px 0 0;
+
+  color: #7f8997;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.profileBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  color: #93c5fd;
+
+  background: rgba(37, 99, 235, 0.1);
+
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.divider {
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.formWrapper {
+  padding: 26px;
+}
+
+/* Footer note */
+
+.securityNote {
+  margin: 18px 4px 0;
+
+  color: #697382;
+
+  font-size: 12px;
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+/* Tablet */
+
+@media (max-width: 767px) {
+  .page {
+    padding-top: 32px;
+    padding-bottom: 50px;
+  }
+
+  .layout {
+    margin-top: 24px;
+  }
+
+  .header {
+    margin-bottom: 22px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .formCard {
+    border-radius: 15px;
+  }
+
+  .formHeader {
+    padding: 20px;
+  }
+
+  .formWrapper {
+    padding: 20px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .page {
+    padding-top: 26px;
+    padding-bottom: 40px;
+  }
+
+  .layout {
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .formHeader {
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .formTitle {
+    font-size: 16px;
+  }
+
+  .formDescription {
+    font-size: 12px;
+  }
+
+  .profileBadge {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+  }
+
+  .formWrapper {
+    padding: 16px;
+  }
+
+  .securityNote {
+    font-size: 11px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .formCard {
+    transition: none;
+  }
+}

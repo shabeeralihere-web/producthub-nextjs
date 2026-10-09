@@ -1,0 +1,84 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #e1e4e8;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #5f6368;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.button:hover:not(:disabled) {
+  border-color: #cfd4da;
+  background: #f8f9fa;
+  color: #e5394f;
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.heart {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.8;
+}
+
+.active {
+  color: #e5394f;
+}
+
+.active:hover:not(:disabled) {
+  background: #fff5f6;
+  border-color: #f1c5ca;
+  color: #d92f45;
+}
+
+.spinner {
+  width: 15px;
+  height: 15px;
+  animation: spin 800ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 575px) {
+  .button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .heart {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .spinner {
+    animation: none;
+  }
+}

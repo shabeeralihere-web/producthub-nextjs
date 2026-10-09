@@ -1,0 +1,104 @@
+.page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #f8fafc;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  padding: 55px 40px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #111827;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.code {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.title {
+  margin: 0 0 14px;
+  color: #111827;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.message {
+  max-width: 400px;
+  margin: 0 auto 30px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 24px;
+  border-radius: 10px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 576px) {
+  .page {
+    min-height: calc(100vh - 60px);
+    padding: 40px 16px;
+  }
+
+  .card {
+    padding: 45px 24px;
+    border-radius: 16px;
+  }
+
+  .code {
+    font-size: 52px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .message {
+    font-size: 15px;
+  }
+}

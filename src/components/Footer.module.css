@@ -1,0 +1,163 @@
+.footer {
+  margin-top: auto;
+  background: #0a1018;
+  border-top: 1px solid #1c2735;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 48px 24px 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.brand {
+  max-width: 400px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f8fafc;
+  text-decoration: none;
+}
+
+.logoImage {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logoText {
+  color: #f8fafc;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.logoText span {
+  color: #3b82f6;
+}
+
+.description {
+  max-width: 360px;
+  margin: 15px 0 0;
+  color: #718096;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.navigation,
+.socialSection {
+  min-width: 120px;
+}
+
+.navigation h3,
+.socialSection h3 {
+  margin: 3px 0 16px;
+  color: #e5e7eb;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.navigation a {
+  color: #718096;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+  color: #dbeafe;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: #8995a6;
+  background: #111a26;
+  border: 1px solid #202d3d;
+  border-radius: 8px;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.socialLink:hover {
+  color: #dbeafe;
+  background: #162235;
+  border-color: #31527b;
+}
+
+.socialLink svg {
+  width: 15px;
+  height: 15px;
+}
+
+.divider {
+  height: 1px;
+  margin: 38px 0 18px;
+  background: #1c2735;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.bottom span {
+  color: #5f6c7d;
+  font-size: 10px;
+}
+
+@media (max-width: 650px) {
+  .container {
+    padding: 40px 18px 18px;
+  }
+
+  .content {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .brand {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .navigation,
+  .socialSection {
+    min-width: 100px;
+  }
+
+  .bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    gap: 28px;
+  }
+}

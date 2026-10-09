@@ -1,0 +1,344 @@
+.page {
+  min-width: 0;
+  color: #f8fafc;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin-bottom: 6px;
+  color: #3b82f6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.title {
+  margin: 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.overviewCard {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #1e293b;
+  border-radius: 11px;
+  background: #0f1722;
+}
+
+.overviewIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #3b82f6;
+}
+
+.customerIcon {
+  background: rgba(14, 165, 233, 0.1);
+  color: #38bdf8;
+}
+
+.sellerIcon {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+}
+
+.adminIcon {
+  background: rgba(168, 85, 247, 0.1);
+  color: #c084fc;
+}
+
+.overviewLabel {
+  display: block;
+  margin-bottom: 3px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.overviewValue {
+  display: block;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.userSection {
+  margin-bottom: 22px;
+  padding: 21px;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  background: #0f1722;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.sectionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.customerSectionIcon {
+  background: rgba(14, 165, 233, 0.1);
+  color: #38bdf8;
+}
+
+.sellerSectionIcon {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+}
+
+.adminSectionIcon {
+  background: rgba(168, 85, 247, 0.1);
+  color: #c084fc;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.sectionDescription {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.sectionCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 26px;
+  margin-left: auto;
+  padding: 0 8px;
+  border: 1px solid #263244;
+  border-radius: 6px;
+  background: #0b111b;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.userGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #1e293b;
+  border-radius: 9px;
+  background: #0b111b;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.userCard:hover {
+  border-color: #29466f;
+  background: #101a2a;
+}
+
+.userIdentity {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid #263244;
+  border-radius: 50%;
+  background: #172235;
+  color: #93c5fd;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.avatarImage {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid #263244;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userInfo {
+  min-width: 0;
+}
+
+.userName {
+  margin: 0 0 3px;
+  overflow: hidden;
+  color: #f8fafc;
+  font-size: 13px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.userEmail {
+  margin: 0;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.userDetails {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.roleBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.customerBadge {
+  background: rgba(14, 165, 233, 0.1);
+  color: #38bdf8;
+}
+
+.sellerBadge {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+}
+
+.adminBadge {
+  background: rgba(168, 85, 247, 0.1);
+  color: #c084fc;
+}
+
+.joinedDate {
+  color: #475569;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.emptySection {
+  padding: 28px 15px;
+  border: 1px dashed #263244;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.emptySection p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+@media (max-width: 1199.98px) {
+  .overviewGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .userGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .userSection {
+    padding: 18px;
+  }
+
+  .userCard {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .userDetails {
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .overviewCard {
+    padding: 15px;
+  }
+
+  .sectionHeader {
+    align-items: flex-start;
+  }
+
+  .sectionDescription {
+    max-width: 240px;
+  }
+}

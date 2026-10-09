@@ -1,0 +1,216 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  background: #11151c;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.24);
+}
+
+/* Product image */
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 255px;
+  overflow: hidden;
+  background: #f4f5f7;
+}
+
+.imageLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.productImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 18px;
+  transition: transform 260ms ease;
+}
+
+.card:hover .productImage {
+  transform: scale(1.035);
+}
+
+/* Wishlist */
+
+.wishlistWrapper {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+}
+
+/*
+  WishlistButton owns the wishlist functionality.
+  These styles only control its appearance inside
+  the product card.
+*/
+
+.wishlistWrapper :global(button) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid rgba(20, 24, 30, 0.1);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  color: #4d5663;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.wishlistWrapper :global(button:hover) {
+  background: #ffffff;
+  color: #e5485d;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.16);
+  transform: scale(1.05);
+}
+
+.wishlistWrapper :global(button:active) {
+  transform: scale(0.96);
+}
+
+.wishlistWrapper :global(svg) {
+  width: 17px;
+  height: 17px;
+}
+
+/* Product content */
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.productLink {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.productName {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: #edf1f6;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.productLink:hover .productName {
+  color: #6caeff;
+}
+
+.category {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 9px;
+  color: #737e8d;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.price {
+  margin-top: 10px;
+  color: #f4f7fa;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+/* Add to cart */
+
+.cartWrapper {
+  width: 100%;
+  margin-top: 16px;
+}
+
+/*
+  AddToCartButton now owns its own button styling.
+  ProductCard only controls its placement.
+*/
+
+/* Mobile */
+
+@media (max-width: 575px) {
+  .imageWrapper {
+    height: 230px;
+  }
+
+  .productImage {
+    padding: 15px;
+  }
+
+  .content {
+    padding: 14px;
+  }
+
+  .productName {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .wishlistWrapper {
+    top: 10px;
+    right: 10px;
+  }
+
+  .wishlistWrapper :global(button) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .productImage,
+  .wishlistWrapper :global(button) {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .productImage {
+    transform: none;
+  }
+}

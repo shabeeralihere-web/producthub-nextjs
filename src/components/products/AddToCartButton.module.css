@@ -1,0 +1,81 @@
+.wrapper {
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid #3c8ce8;
+  border-radius: 8px;
+  background: #357fd4;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease,
+    opacity 160ms ease;
+}
+
+.button:hover:not(:disabled) {
+  border-color: #4b98ed;
+  background: #438fe8;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.button svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.spinner {
+  animation: spin 800ms linear infinite;
+}
+
+.error {
+  margin-top: 9px;
+  color: #ef737d;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 575px) {
+  .button {
+    min-height: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .spinner {
+    animation: none;
+  }
+}
