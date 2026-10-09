@@ -12,7 +12,7 @@ import {
   FiUser,
 } from "react-icons/fi";
 
-import styles from "./AddressForm.module.css";
+import styles from "../AddressForm.module.css";
 
 const emptyForm = {
   label: "",
